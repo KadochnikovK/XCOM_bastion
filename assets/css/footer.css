@@ -1,0 +1,62 @@
+.footer {
+  border-top: var(--border-h-md) solid var(--color-regular);
+  background-color: var(--color-white);
+  padding-top: var(--padding-lg);
+  scroll-padding-bottom: var(--padding-lg);
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+@media (min-width: 768px) {
+  .footer__content {
+    flex-direction: row;
+  }
+}
+.footer__item {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-lg);
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .footer__item:first-child {
+    width: 100%;
+  }
+}
+.footer__menu {
+  display: flex;
+  gap: var(--gap-md);
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .footer__menu {
+    width: 100%;
+    order: 1;
+  }
+}
+.footer__link {
+  color: var(--color-regular);
+  font-size: var(--fs-sm);
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.footer__link--main {
+  color: var(--color-orange);
+  font-weight: 600;
+}
+.footer__button {
+  font-size: var(--fs-sm);
+}
+@media (max-width: 767px) {
+  .footer__button {
+    font-size: var(--fs-xs);
+  }
+  .footer__button img {
+    width: 18px;
+  }
+}/*# sourceMappingURL=footer.css.map */

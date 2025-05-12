@@ -1,0 +1,15 @@
+.block {
+    background: var(--img-url, '');
+    background-color: var(--bg-color, var(--color-blue-second));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        height: var(--height, auto);
+        width: 100%;
+    }
+}

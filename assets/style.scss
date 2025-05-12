@@ -1,0 +1,34 @@
+@import "./css/normalize";
+@import "./css/root.scss";
+@import "./css/font";
+@import "./css/button";
+@import "./css/header";
+@import "./css/collage";
+@import "./css/offer";
+@import "./css/bullets";
+@import "./css/tagline";
+@import "./css/goods";
+@import "./css/info";
+@import "./css/block";
+@import "./css/form";
+@import "./css/footer";
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}

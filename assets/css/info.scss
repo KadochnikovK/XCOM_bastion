@@ -1,0 +1,18 @@
+.info {
+    &__content {
+        padding-top: var(--padding-xl);
+        padding-bottom: var(--padding-xl);
+    }
+
+    &__text {
+        line-height: var(--lh-lg);
+        font-size: var(--fs-sm);
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap-md) var(--gap-md);
+    }
+}
