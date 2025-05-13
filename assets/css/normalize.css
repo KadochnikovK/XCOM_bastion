@@ -9,7 +9,8 @@ Use a better box model (opinionated).
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /**
@@ -19,12 +20,16 @@ Use a better box model (opinionated).
 4. Use a more readable tab size (opinionated).
 */
 html {
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* 1 */
-  line-height: 1.15; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 3 */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
   -moz-tab-size: 4;
     -o-tab-size: 4;
-       tab-size: 4; /* 4 */
+       tab-size: 4;
+  /* 4 */
 }
 
 /*
@@ -58,8 +63,10 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /**
@@ -112,19 +119,23 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 /**
 Correct the inability to style clickable types in iOS and Safari.
 */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -154,9 +165,11 @@ Correct the cursor style of increment and decrement buttons in Safari.
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */
-[type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
@@ -171,8 +184,10 @@ Remove the inner padding in Chrome and Safari on macOS.
 2. Change font properties to 'inherit' in Safari.
 */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /*
@@ -184,4 +199,4 @@ Add the correct display in Chrome and Safari.
 */
 summary {
   display: list-item;
-}/*# sourceMappingURL=normalize.css.map */
+}

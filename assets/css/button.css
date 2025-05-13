@@ -1,11 +1,18 @@
 .button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   gap: var(--gap-sm);
   padding: var(--padding-base);
   border-radius: 10pc;
+  background: -webkit-gradient(linear, left top, right top, from(var(--color-blue-main)), to(var(--color-blue-second)));
   background: linear-gradient(90deg, var(--color-blue-main) 0%, var(--color-blue-second) 100%);
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--color-white);
   border: none;
   cursor: pointer;
@@ -14,16 +21,26 @@
   text-decoration: none;
   font-weight: 500;
   font-size: var(--fs-base);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
+
 .button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
+
 .button:active {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
+
 .button::after {
   content: "";
   position: absolute;
@@ -33,16 +50,33 @@
   height: 0;
   background: var(--color-white);
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
 }
+
 .button:focus:not(:active)::after {
-  animation: ripple 0.6s ease-out forwards;
+  -webkit-animation: ripple 0.6s ease-out forwards;
+          animation: ripple 0.6s ease-out forwards;
 }
+
 @media (max-width: 1023px) {
   .button {
     font-size: var(--fs-sm);
+  }
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
   }
 }
 
@@ -57,4 +91,4 @@
     height: 200px;
     opacity: 0;
   }
-}/*# sourceMappingURL=button.css.map */
+}
