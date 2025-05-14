@@ -1,6 +1,7 @@
 .button {
   display: inline-flex;
   gap: var(--gap-sm);
+  width: max-content;
   padding: var(--padding-base);
   border-radius: 10pc;
   background: linear-gradient(90deg, var(--color-blue-main) 0%, var(--color-blue-second) 100%);
@@ -15,9 +16,13 @@
   font-weight: 500;
   font-size: var(--fs-base);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: 
+  transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+
+  &--sm {
+    font-size: var(--fs-sm);
+  }
 
   &:hover {
     transform: translateY(-2px);
@@ -57,6 +62,7 @@
     height: 0;
     opacity: 1;
   }
+
   100% {
     width: 200px;
     height: 200px;

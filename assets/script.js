@@ -92,6 +92,70 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 
+  function showModal(title = '', text = '', buttonText = '', content = null) {
+    const modal = document.querySelector(".modal");
+    const modalWindow = modal.querySelector(".modal__window");
+    const modalHeadline = modal.querySelector(".modal__headline");
+    const modalText = modal.querySelector(".modal__text");
+    const modalButton = modal.querySelector(".modal__button");
+    const modalClose = modal.querySelector(".modal__close");
+
+    modalHeadline.style.display = title === '' ? 'none' : 'block'
+    modalText.style.display = text === '' ? 'none' : 'block'
+    modalButton.style.display = buttonText === '' ? 'none' : 'block'
+
+    if (content) {
+      modalWindow.append(content)
+      modalWindow.classList.add('modal__window--content')
+    }
+
+    modalHeadline.textContent = title;
+    modalText.textContent = text;
+    modalButton.textContent = buttonText;
+
+    modal.style.display = "flex";
+
+    modalWindow.classList.add("animate__fadeInUp");
+    modal.classList.add("animate__fadeIn");
+
+    function closeModal() {
+      modalWindow.classList.remove("animate__fadeInUp");
+      modalWindow.classList.add("animate__fadeOutDown");
+      modal.classList.remove("animate__fadeIn");
+      modal.classList.add("animate__fadeOut");
+
+      setTimeout(() => {
+        modal.style.display = "none";
+        modalWindow.classList.remove("animate__fadeOutDown");
+        modal.classList.remove("animate__fadeOut");
+
+        modalHeadline.textContent = "";
+        modalText.textContent = "";
+        modalButton.textContent = "";
+        content.remove()
+      }, 500);
+    }
+
+    modalButton.addEventListener("click", closeModal);
+    modalClose.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  }
+
+  function openSert() {
+    const img = document.createElement('img')
+    img.src = './assets/images/sert-big.jpg'
+    img.style.maxWidth = '600px'
+
+    showModal('','','', img)
+  }
+
+  document.querySelector('#sert-img').addEventListener('click', openSert)
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     clearErrors();
@@ -118,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       console.log("Данные формы:", formData);
 
-      alert("Форма успешно отправлена!");
+      showModal("Данные успешно отправлены", "Мы свяжемся с вами в течение 10 минут", "Хорошо");
     }
   });
 
@@ -156,28 +220,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const header = document.querySelector('header');
-  const main = document.querySelector('main');
-  
+  const header = document.querySelector("header");
+  const main = document.querySelector("main");
+
   if (header && main) {
-    const resizeObserver = new ResizeObserver(entries => {
+    const resizeObserver = new ResizeObserver((entries) => {
       for (let entry of entries) {
         main.style.marginTop = `${entry.target.offsetHeight}px`;
       }
     });
-  
+
     resizeObserver.observe(header);
   }
 
   const currentYear = new Date().getFullYear();
-    
-   
-    const copyrightText = `© 2018–${currentYear} X-Com. Все права защищены.`;
-    
-    const copyElement = document.getElementById('copy');
-    if (copyElement) {
-        copyElement.textContent = copyrightText;
-    } else {
-        console.warn('Элемент с id "copy" не найден на странице');
-    }
+
+  const copyrightText = `© 2018–${currentYear} X-Com. Все права защищены.`;
+
+  const copyElement = document.getElementById("copy");
+  if (copyElement) {
+    copyElement.textContent = copyrightText;
+  } else {
+    console.warn('Элемент с id "copy" не найден на странице');
+  }
 });

@@ -1,5 +1,8 @@
 @import "./root";
 
+$sm: 576px;
+$md: 768px;
+$lg: 1200px;
 
 .group {
     display: flex;
@@ -7,7 +10,10 @@
     gap: var(--gap-sm);
 
     &__item {
-        flex: 1 1 33%;         
+        flex: 1 1 33%; 
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-sm);        
     }
 
     &--center {

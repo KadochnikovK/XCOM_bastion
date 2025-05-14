@@ -4,96 +4,61 @@
   padding-top: var(--padding-lg);
   scroll-padding-bottom: var(--padding-lg);
 }
-
 .footer__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: var(--gap-md);
 }
-
 @media (min-width: 768px) {
   .footer__content {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
-
 .footer__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: var(--gap-lg);
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
 @media (max-width: 767px) {
   .footer__item:first-child {
     width: 100%;
   }
 }
-
 .footer__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: var(--gap-md);
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 @media (max-width: 767px) {
   .footer__menu {
     width: 100%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
 }
-
 .footer__link {
   color: var(--color-regular);
-  font-size: var(--fs-sm);
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .footer__link--main {
   color: var(--color-orange);
   font-weight: 600;
 }
-
 .footer__button {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
 }
-
+.footer__button img {
+  width: var(--fs-xs);
+}
 @media (max-width: 767px) {
   .footer__button {
     font-size: var(--fs-xs);
   }
   .footer__button img {
-    width: 18px;
+    width: var(--fs-xs);
   }
-}
+}/*# sourceMappingURL=footer.css.map */

@@ -44,7 +44,7 @@
 
     &__link {
         color: var(--color-regular);
-        font-size: var(--fs-sm);
+        // font-size: var(--fs-sm);
         text-align: center;
         display: flex;
         align-items: center;
@@ -56,12 +56,14 @@
     }
 
     &__button {
-        font-size: var(--fs-sm);
-
+        font-size: var(--fs-xs);
+        img {
+            width: var(--fs-xs);
+        }
         @media (max-width: 767px) {
             font-size: var(--fs-xs);
             & img {
-                width: 18px;
+                width: var(--fs-xs);
             }
         }
     }

@@ -87,14 +87,14 @@
         }
 
         &__headline {
-            font-size: var(--fs-xl);
+            font-size: var(--fs-lg);
             margin-bottom: 40px;
         }
 
         &__logo:not(.offer__logo--sm) {
-            top: calc(var(--fs-xl) / 3.5);
-            height: calc(var(--fs-xl) * 1.25);
-            max-height: calc(var(--fs-xl) * 1.25);
+            top: calc(var(--fs-lg) / 3.5);
+            height: calc(var(--fs-lg) * 1.25);
+            max-height: calc(var(--fs-lg) * 1.25);
         }
 
         &__papagraph {

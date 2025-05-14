@@ -6,14 +6,9 @@
   background-repeat: no-repeat;
   position: relative;
 }
-
 .block__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: var(--height, auto);
   width: 100%;
-}
+}/*# sourceMappingURL=block.css.map */

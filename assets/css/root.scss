@@ -13,10 +13,13 @@ body {
 }
 
 .icon {
+    height: var(--fs-base);
+    width: var(--fs-base);
+
     &--md {
         height: calc(var(--fs-base) * 1.5);
-        width: auto;
-        
+        width: calc(var(--fs-base) * 1.5);
+
     }
 }
 
@@ -34,6 +37,30 @@ a {
 .flex {
     display: flex;
     gap: var(--gap-md);
+
+    &--column {
+        flex-direction: column;
+    }
+
+    &--inline {
+        display: inline-flex;
+    }
+}
+
+.center-mobile {
+    @media (max-width: 1024px) {
+        margin: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.inline-center {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .link {
@@ -47,6 +74,11 @@ a {
 .logo {
     line-height: 0;
 }
+
+.margin-top-xs {
+    margin-top: 40px;
+}
+
 
 .margin-top-sm {
     margin-top: 80px;
@@ -90,6 +122,7 @@ a {
     &--main {
         color: var(--color-regular);
     }
+
     &--left {
         text-align: left;
     }
@@ -157,6 +190,7 @@ a {
     @media (max-width: 1023px) {
 
         text-align: center;
+
         &::after {
             left: 50%;
             transform: translateX(-50%);
@@ -178,13 +212,15 @@ a {
     max-width: var(--max-size) !important;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     padding: var(--padding-base);
 
     &--column {
         flex-direction: column;
-    };
+    }
+
+    ;
 }
 
 $breakpoints: (
@@ -193,9 +229,7 @@ $breakpoints: (
     "lg": 1200px,
 );
 
-$sm: 576px;
-$md: 768px;
-$lg: 1200px;
+
 
 @mixin respond-to($breakpoint) {
     @media (min-width: map-get($breakpoints, $breakpoint)) {
@@ -233,7 +267,7 @@ $lg: 1200px;
 
     // размер шрифта
     --fs-xl: 3rem;
-    --fs-lg: 2.25rem;
+    --fs-lg: 2.5rem;
     --fs-md: 2rem;
     --fs-base: 1.5rem;
     --fs-sm: 1rem;
@@ -255,7 +289,7 @@ $lg: 1200px;
 @include respond-to("md") {
     :root {
         --fs-xl: 3rem;
-        --fs-lg: 2.25rem;
+        --fs-lg: 2.5rem;
         --fs-md: 2rem;
         --fs-base: 1.5rem;
         --fs-sm: 1rem;
@@ -278,4 +312,8 @@ $lg: 1200px;
 
 .orange {
     color: var(--color-orange);
+}
+
+.white {
+    color: var(--color-white);
 }

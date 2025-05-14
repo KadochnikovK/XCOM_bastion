@@ -2,53 +2,39 @@
   padding-top: var(--padding-xl);
   padding-bottom: var(--padding-xl);
 }
-
 .goods__grid {
-  display: -ms-grid;
   display: grid;
   gap: var(--gap-lg);
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-
 .goods__headline {
   margin-top: 20px;
 }
-
 .goods__headline::after {
   width: 100%;
   height: 2px;
 }
-
 @media (max-width: 1023px) {
   .goods__headline {
     font-size: var(--fs-md);
   }
 }
-
 .goods__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
   padding: var(--padding-lg);
   border-radius: var(--radius-sm);
   border: var(--border-h-md) solid var(--color-grey-light);
 }
-
 .goods__image {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 250px;
 }
-
 .goods__text {
   margin-bottom: 10px;
   font-size: var(--fs-sm);
   line-height: var(--lh-md);
-}
+}/*# sourceMappingURL=goods.css.map */
